@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick Registration — Autofill Optimized</title>
+  <meta name="autofill" content="on">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 520px; margin:auto; }
+    h2 { color:#0ea5e9; }
+    label { display:block; margin: 12px 0 6px; font-weight:600; }
+    input { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size:16px; }
+    button { margin-top: 20px; padding: 12px; background:#0ea5e9; color:#fff; border:0; border-radius:8px; cursor:pointer; font-weight:600; width:100%; }
+    button:hover { background:#0284c7; }
+    .hint { font-size: 12px; color:#64748b; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <h2>Quick Registration</h2>
+
+  <!-- Important: form and inputs have autocomplete attributes and standard names -->
+  <form id="reg" autocomplete="on" name="contact" method="post" action="#">
+    <!-- Full Name (Chrome/Safari look for name='name' and autocomplete='name') -->
+    <label for="name">Full Name</label>
+    <input id="name" name="name" type="text"
+           autocomplete="name" autocapitalize="words" spellcheck="false" required
+           placeholder="Your full name">
+
+    <!-- Phone (Chrome/Safari look for name='tel' and autocomplete='tel') -->
+    <label for="tel">Phone Number</label>
+    <input id="tel" name="tel" type="tel"
+           autocomplete="tel" inputmode="tel" required
+           placeholder="Your phone number">
+
+    <!-- Email (use 'email' not 'gmail' so browsers recognize it) -->
+    <label for="email">Gmail Address</label>
+    <input id="email" name="email" type="email"
+           autocomplete="email" required
+           placeholder="yourname@gmail.com">
+
+    <div class="hint">Tip: Your browser will suggest saved details. If you don't see suggestions, see the notes below.</div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>If autofill doesn't show</h3>
+  <ol>
+    <li>Make sure you're opening this page over <strong>HTTPS</strong> on your site (not from file://).</li>
+    <li>Chrome: Settings → Autofill → <em>Addresses and more</em> → turn on &amp; add your name, phone, and email.</li>
+    <li>Safari (iPhone/Mac): Settings → Safari → AutoFill → <em>Use Contact Info</em> ON, and your contact card has name/phone/email.</li>
+    <li>Click/tap inside each field once; browsers only suggest after focus and user interaction.</li>
+  </ol>
+</body>
+</html>
